@@ -1,0 +1,32 @@
+{
+  "name": "project name",
+  "description": "",
+  "main": "project.js",
+  "authors": [
+    "suches <suches@btbtd.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    
+  "dependencies": {
+    "jquery"                    : "~1.8.3"
+	, "underscore"              : "~1.7.0"
+    , "swfobject-amd": "~2.3.0"
+
+	, "mv.init_webpack.sh"      : "latest"
+
+    , "mv.js"                   : "latest"
+	, "mv.log.js"               : "latest"
+	, "mv.action.js"            : "latest"
+	, "mv.basehandler.js"       : "latest"
+	, "mv.const.js"             : "latest"
+  }
+
+}

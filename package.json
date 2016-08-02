@@ -1,0 +1,44 @@
+{
+  "name": "project name",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "http://project.com",
+  "private": true,
+  "main": "project.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "suches@btbtd.com",
+  "license": "ISC",
+  "devDependencies": {
+
+    "webpack": "^1.13.0"
+    , "webpack-dev-server": "^1.14.1"
+
+    , "css-loader": "^0.23.1"
+    , "style-loader": "^0.13.1"
+    , "jsx-loader": "^0.13.2"
+    , "file-loader": "^0.8.5"
+    , "url-loader": "^0.5.7"
+    , "json-loader": "^0.5.4"
+	, "lodash": "^4.13.1"
+    , "html-loader": "^0.4.3"
+	, "underscore-template-loader": "^0.7.3"
+
+    , "react": "^15.0.1"
+    , "react-dom": "^15.0.1"
+
+    , "bower": "^1.7.9"
+    , "bower-webpack-plugin": "^0.1.8"
+
+	, "i18n-webpack-plugin": "^0.2.7"
+
+    , "ismobilejs": "^0.4.0"
+	, "underscore": "^1.7.0"
+
+    , "extract-text-webpack-plugin": "^1.0.1"
+    , "html-webpack-plugin": "^2.12.0"
+
+	, "debug": "2.1.0"
+  }
+}
