@@ -17,7 +17,7 @@ var languages = {
 */
 
 var entry = {
-        "list": "./src-webpack/static/js/index.js"
+        "index": "./src-webpack/static/js/index.js"
     }
     , chunks = Object.keys(entry)
     ;
