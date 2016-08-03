@@ -21,6 +21,7 @@
     , "swfobject-amd": "~2.3.0"
 
 	, "mv.init_webpack.sh"      : "latest"
+	, "html5shiv"				: "latest"
 
     , "mv.js"                   : "latest"
 	, "mv.log.js"               : "latest"

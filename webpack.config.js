@@ -88,6 +88,7 @@ foreachFolder('./src-webpack/',function(list){
 	for(var i = 0,item; item = list[i++];){
 		if(item[0].slice(-5)=='.html'){
 			var name = item[0].slice(0,-5);
+            if( !( name in entry ) ) continue;
 			config.plugins.push(new HtmlWebpackPlugin({ 
 				filename: '../../' + name + '.html', 
 				template: './src-webpack/' + name + '.html', 
