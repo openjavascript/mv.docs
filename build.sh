@@ -52,3 +52,5 @@ cp -r `find ${TEMP_DIR}/output/html/ -iname *.html` "${OUTPUT_DIR}/";
 # 清空临时目录
 rm -rf "${TEMP_DIR}/";
 echo "Built done.";
+
+node ./utils/reset_url_prefix.js
