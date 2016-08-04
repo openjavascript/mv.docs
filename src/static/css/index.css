@@ -1,7 +1,7 @@
 
-@import url( './reset.css' );
-@import url( './base.css' );
-
+@import url( './include/reset.css' );
+@import url( './include/base.css' );
+@import url( './include/common.css' );
 
 dl.cat {
     margin: 0 0 10px 0;
