@@ -21,7 +21,7 @@ input::-ms-clear{display:none;}
 body{
 	background: #fff; 
 	color: #333; 
-	font:12px/1.5 tahoma,arial;
+    font: 12px/1.5 "Helvetica Neue",Helvetica,"Microsoft Yahei",STHeiTi,sans-serif,Arial;
 }
 /* clearfix */
 .clearfix:before,
