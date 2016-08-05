@@ -1,16 +1,8 @@
 var V = require( 'mv.js' )
     , Const = require( '../../js/const.js' )
-    //, Item = require( './item.jsx' )
+    , Item = require( './item.jsx' )
     , Tpl = null
-    , data = require( '../../json/category.json' )
     ;
-
-
-/*
-                {data.map( function( item ) {
-                    return <Item data={item} />;
-                })}
-*/
 
 module.exports = Tpl = React.createClass({
     componentDidMount: function(){
@@ -20,10 +12,15 @@ module.exports = Tpl = React.createClass({
         var data = this.props.data || {};
 
         return (
-            <div class="inner clearfix">
+            <div className="inner clearfix">
+                {data.map( function( item ) {
+                    return <Item data={item} />;
+                })}
             </div>
         );
     }
 });
 
-ReactDOM.render( <Tpl data={ { data: []} } />, document.getElementById( '#content-wrapper' ) );
+Const.on( Const.initPage, function( _evt, _data ){
+    ReactDOM.render( <Tpl {..._data} />, document.getElementById( 'content-wrapper' ) );
+});

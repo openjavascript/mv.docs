@@ -2,11 +2,17 @@ webpackJsonp([1,4],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	console.log('This would be the main JS file.');
+	
 
 	var V = __webpack_require__( 1 )
-	    , Tpl = __webpack_require__( 4 )
+	    , Const = __webpack_require__( 4 )
+	    , data = __webpack_require__( 13 )
 	    ;
+
+	    __webpack_require__( 14 )
+
+
+	Const.trigger( Const.initPage, [ data ] );
 
 
 /***/ },
@@ -727,78 +733,36 @@ webpackJsonp([1,4],[
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React, ReactDOM) {/** @jsx React.DOM */var V = __webpack_require__( 1 )
-	    , Const = __webpack_require__( 7 )
-	    //, Item = require( './item.jsx' )
-	    , Tpl = null
-	    , data = __webpack_require__( 17 )
-	    ;
-
-
-	/*
-	                {data.map( function( item ) {
-	                    return <Item data={item} />;
-	                })}
-	*/
-
-	module.exports = Tpl = React.createClass({displayName: "Tpl",
-	    componentDidMount: function(){
-	    }
-
-	    , render: function(){
-	        var data = this.props.data || {};
-
-	        return (
-	            React.createElement("div", {class: "inner clearfix"}
-	            )
-	        );
-	    }
-	});
-
-	ReactDOM.render( React.createElement(Tpl, {data:  { data: []} }), document.getElementById( '#content-wrapper' ) );
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(6)))
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	module.exports = React;
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	module.exports = ReactDOM;
-
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/* WEBPACK VAR INJECTION */(function($) {
-	var V = __webpack_require__( 1 )
-	    , Const = __webpack_require__( 8 )
-	    ;
 
-	module.exports = $.extend( true, {}, {
-	    indexDefaultImg: './static/img/default_item.jpg'
-	} );
+	var V = __webpack_require__( 1 )
+	    , Const = __webpack_require__( 5 )
+	    , r = $.extend( true, Const, {
+	            index: {
+	                defaultImg: './static/img/default_item.jpg'
+	                , defaultDesc: '该应用没有添加描述'
+	            }
+	            , initPage: 'onInitPage'
+	        } )
+	    ;
+	module.exports = r;
+
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 8 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(9);
+	module.exports = __webpack_require__(6);
 
 /***/ },
-/* 9 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($, module) {
+	/* WEBPACK VAR INJECTION */(function($) {
 	var V = __webpack_require__( 1 )
-	    , BaseHandler = __webpack_require__( 11 )
+	    , BaseHandler = __webpack_require__( 7 )
 	    ;
 
 	V.Const = $.extend( true, V.Const || {}, {
@@ -874,40 +838,24 @@ webpackJsonp([1,4],[
 	    }
 	}, BaseHandler );
 
-	module.export = V.Const;
+	module.exports = V.Const;
 
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(10)(module)))
-
-/***/ },
-/* 10 */
-/***/ function(module, exports) {
-
-	module.exports = function(module) {
-		if(!module.webpackPolyfill) {
-			module.deprecate = function() {};
-			module.paths = [];
-			// module.parent = undefined by default
-			module.children = [];
-			module.webpackPolyfill = 1;
-		}
-		return module;
-	}
-
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 11 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(12);
+	module.exports = __webpack_require__(8);
 
 /***/ },
-/* 12 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {var V = __webpack_require__( 1 )
-	    , Log = __webpack_require__( 13 )
-	    , _ = __webpack_require__( 15 )
+	    , Log = __webpack_require__( 9 )
+	    , _ = __webpack_require__( 11 )
 	    ;
 
 	/**
@@ -977,16 +925,16 @@ webpackJsonp([1,4],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 13 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(14);
+	module.exports = __webpack_require__(10);
 
 /***/ },
-/* 14 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__( 15 );
+	var _ = __webpack_require__( 11 );
 
 	!window.console && (
 		window.console = {
@@ -1062,13 +1010,13 @@ webpackJsonp([1,4],[
 
 
 /***/ },
-/* 15 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(16);
+	module.exports = __webpack_require__(12);
 
 /***/ },
-/* 16 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.7.0
@@ -2489,81 +2437,183 @@ webpackJsonp([1,4],[
 
 
 /***/ },
-/* 17 */
+/* 13 */
 /***/ function(module, exports) {
 
-	module.exports = {
-		"data": [
-			{
-				"name": "项目方案",
-				"items": [
-					{
-						"name": "默认",
-						"img": "./static/img/default_item.jpg",
-						"url": "#",
-						"desc": ""
-					},
-					{
-						"name": "动态模板",
-						"img": "./static/img/default_item.jpg",
-						"url": "#",
-						"desc": ""
-					},
-					{
-						"name": "动态模板 + React",
-						"img": "./static/img/default_item.jpg",
-						"url": "#",
-						"desc": ""
-					},
-					{
-						"name": "动态模板 + less",
-						"img": "./static/img/default_item.jpg",
-						"url": "#",
-						"desc": ""
-					},
-					{
-						"name": "动态模板 + React + less",
-						"img": "./static/img/default_item.jpg",
-						"url": "#",
-						"desc": ""
-					}
-				]
-			},
-			{
-				"name": "webpack 应用组件",
-				"items": [
-					{
-						"name": "item name",
-						"img": "./static/img/default_item.jpg",
-						"url": "#",
-						"desc": ""
-					}
-				]
-			},
-			{
-				"name": "webpack 系统组件",
-				"items": [
-					{
-						"name": "item name",
-						"img": "./static/img/default_item.jpg",
-						"url": "#",
-						"desc": ""
-					}
-				]
-			},
-			{
-				"name": "webpack 小工具",
-				"items": [
-					{
-						"name": "item name",
-						"img": "./static/img/default_item.jpg",
-						"url": "#",
-						"desc": ""
-					}
-				]
-			}
-		]
+	var r = {
+	    "data": [
+	        {
+	            "name": "项目方案"
+	            , "items": [
+	                {
+	                    "name": "默认"
+	                    , "img": "./static/img/default_item.jpg"
+	                    , "url": "#"
+	                    , "desc": ""
+	                }
+	                /*
+	                , {
+	                    "name": "动态模板"
+	                    , "img": "./static/img/default_item.jpg"
+	                    , "url": "#"
+	                    , "desc": ""
+	                }
+	                , {
+	                    "name": "动态模板 + React"
+	                    , "img": "./static/img/default_item.jpg"
+	                    , "url": "#"
+	                    , "desc": ""
+	                }
+	                , {
+	                    "name": "动态模板 + less"
+	                    , "img": "./static/img/default_item.jpg"
+	                    , "url": "#"
+	                    , "desc": ""
+	                }
+	                , {
+	                    "name": "动态模板 + React + less"
+	                    , "img": "./static/img/default_item.jpg"
+	                    , "url": "#"
+	                    , "desc": ""
+	                }
+	                */
+	            ]
+	        }
+	        , {
+	            "name": "webpack 应用组件"
+	            , "items": [
+	                {
+	                    "name": "mv.js"
+	                    , "url": "https://github.com/openjavascript/mv.js"
+	                    , "doc_url": ""
+	                    , "desc": "提供V命名空间和常用的工具函数提供V命名空间和常用的工具函数提供V命名空间和常用的工具函数"
+	                }
+	            ]
+	        }
+	        , {
+	            "name": "webpack 系统组件"
+	            , "items": [
+	                {
+	                    "name": "item name"
+	                    , "img": "./static/img/default_item.jpg"
+	                    , "url": "#"
+	                    , "desc": ""
+	                }
+	            ]
+	        } 
+	        , {
+	            "name": "webpack 小工具"
+	            , "items": [
+	                {
+	                    "name": "item name"
+	                    , "img": "./static/img/default_item.jpg"
+	                    , "url": "#"
+	                    , "desc": ""
+	                }
+	            ]
+	        }
+
+	    ]
 	};
+	module.exports = r;
+
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React, ReactDOM) {/** @jsx React.DOM */var V = __webpack_require__( 1 )
+	    , Const = __webpack_require__( 4 )
+	    , Item = __webpack_require__( 17 )
+	    , Tpl = null
+	    ;
+
+	module.exports = Tpl = React.createClass({displayName: "Tpl",
+	    componentDidMount: function(){
+	    }
+
+	    , render: function(){
+	        var data = this.props.data || {};
+
+	        return (
+	            React.createElement("div", {className: "inner clearfix"}, 
+	                data.map( function( item ) {
+	                    return React.createElement(Item, {data: item});
+	                })
+	            )
+	        );
+	    }
+	});
+
+	Const.on( Const.initPage, function( _evt, _data ){
+	    ReactDOM.render( React.createElement(Tpl, React.__spread({},  _data)), document.getElementById( 'content-wrapper' ) );
+	});
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15), __webpack_require__(16)))
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	module.exports = React;
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	module.exports = ReactDOM;
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {/** @jsx React.DOM */var V = __webpack_require__( 1 )
+	    , Const = __webpack_require__( 4 )
+	    ;
+
+	module.exports  = React.createClass({displayName: "module.exports",
+	    componentDidMount: function(){
+	    }
+
+	    , render: function(){
+	        var data = this.props.data || {};
+
+	        //return ( <div>test</div> );
+
+	        return (
+	            React.createElement("dl", {className: "clearfix cat"}, 
+	                React.createElement("dt", null, React.createElement("label", null, data.name)), 
+	                React.createElement("dd", null, 
+	                    React.createElement("dl", {className: "clearfix cat_item"}, 
+	                        data.items.map( function( item ) {
+	                            var url = item.doc_url || item.url
+	                                , img = item.img || Const.index.defaultImg 
+	                                , desc = item.desc || Const.index.defaultDesc
+	                                ;
+	                            
+	                            return ( 
+	                                React.createElement("dd", null, 
+	                                    React.createElement("a", {href: url, target: "_blank", className: "cover"}, 
+	                                        React.createElement("img", {src: img}), 
+	                                        React.createElement("span", null), 
+	                                        React.createElement("label", null, desc)
+	                                    ), 
+	                                    React.createElement("a", {href: item.url, target: "_blank", className: "link"}, item.name)
+	                                )
+	                            );
+	                        })
+	                    )
+	                )
+	            )
+	        );
+	    }
+	});
+
+
+
+
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
 
 /***/ }
 ]);

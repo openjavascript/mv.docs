@@ -26,13 +26,62 @@ dl.cat_item {
 dl.cat_item > dt {
 }
 
-dl.cat_item > dd a img {
-    height: 120px;
-    border: 1px solid #ececec;
-}
-
 dl.cat_item > dd {
     float: left;
     width: 200px;
     margin: 10px 10px 10px;
 }
+
+dl.cat_item .cover {
+    position: relative;
+    width: 195px;
+    height: 122px;
+    line-height: 122px;
+    display: inline-block;
+    border: 1px solid #ececec;
+    text-align: center;
+}
+
+dl.cat_item .cover span 
+, dl.cat_item .cover label {
+    visibility: hidden;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+dl.cat_item .cover span {
+    background-color: #000;
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+    position: absolute; 
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+dl.cat_item .cover label {
+    color: #fff;
+    line-height: 14px;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+dl.cat_item .cover:hover span
+, dl.cat_item .cover:hover label {
+    visibility: visible;
+}
+
+dl.cat_item > dd a img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+dl.cat_item .link {
+    font-size: 14px;
+}
+
+
