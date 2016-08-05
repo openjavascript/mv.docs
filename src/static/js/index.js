@@ -2486,7 +2486,7 @@ webpackJsonp([1,4],[
 	                    "name": "mv.js"
 	                    , "url": "https://github.com/openjavascript/mv.js"
 	                    , "doc_url": ""
-	                    , "desc": "提供V命名空间和常用的工具函数提供V命名空间和常用的工具函数提供V命名空间和常用的工具函数"
+	                    , "desc": "提供V命名空间和常用的工具函数"
 	                }
 	            ]
 	        }

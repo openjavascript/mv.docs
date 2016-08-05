@@ -43,8 +43,8 @@ var r = {
                 {
                     "name": "mv.js"
                     , "url": "https://github.com/openjavascript/mv.js"
+                    , "desc": "提供V命名空间和常用的工具函数"
                     , "doc_url": ""
-                    , "desc": "提供V命名空间和常用的工具函数提供V命名空间和常用的工具函数提供V命名空间和常用的工具函数"
                 }
             ]
         }
