@@ -3,12 +3,14 @@ var r = {
         {
             "name": "项目方案"
             , "items": [
+                /*
                 {
                     "name": "默认"
                     , "img": "./static/img/default_item.jpg"
                     , "url": "#"
                     , "desc": ""
                 }
+                */
                 /*
                 , {
                     "name": "动态模板"

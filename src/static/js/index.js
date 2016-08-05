@@ -2445,12 +2445,14 @@ webpackJsonp([1,4],[
 	        {
 	            "name": "项目方案"
 	            , "items": [
+	                /*
 	                {
 	                    "name": "默认"
 	                    , "img": "./static/img/default_item.jpg"
 	                    , "url": "#"
 	                    , "desc": ""
 	                }
+	                */
 	                /*
 	                , {
 	                    "name": "动态模板"
@@ -2485,8 +2487,8 @@ webpackJsonp([1,4],[
 	                {
 	                    "name": "mv.js"
 	                    , "url": "https://github.com/openjavascript/mv.js"
-	                    , "doc_url": ""
 	                    , "desc": "提供V命名空间和常用的工具函数"
+	                    , "doc_url": ""
 	                }
 	            ]
 	        }
@@ -2533,7 +2535,8 @@ webpackJsonp([1,4],[
 	    }
 
 	    , render: function(){
-	        var data = this.props.data || {};
+	        var data = this.props.data || [];
+
 
 	        return (
 	            React.createElement("div", {className: "inner clearfix"}, 
@@ -2571,6 +2574,43 @@ webpackJsonp([1,4],[
 	    , Const = __webpack_require__( 4 )
 	    ;
 
+	var Items  = React.createClass({displayName: "Items",
+	    render: function(){
+	        var data = this.props.data || [];
+
+
+	        if( !data.length ){
+	            return ( 
+	                React.createElement("div", {className: "noitems"}, 
+	                    React.createElement("h2", null, "该分类的内容正在建设中...")
+	                )
+	            );
+	        }
+
+	        return (
+	            React.createElement("dl", {className: "clearfix cat_item"}, 
+	                data.map( function( item ) {
+	                    var url = item.doc_url || item.url
+	                        , img = item.img || Const.index.defaultImg 
+	                        , desc = item.desc || Const.index.defaultDesc
+	                        ;
+	                    
+	                    return ( 
+	                        React.createElement("dd", null, 
+	                            React.createElement("a", {href: url, target: "_blank", className: "cover"}, 
+	                                React.createElement("img", {src: img}), 
+	                                React.createElement("span", null), 
+	                                React.createElement("label", null, desc)
+	                            ), 
+	                            React.createElement("a", {href: item.url, target: "_blank", className: "link"}, item.name)
+	                        )
+	                    );
+	                })
+	            )
+	        );
+	    }
+	});
+
 	module.exports  = React.createClass({displayName: "module.exports",
 	    componentDidMount: function(){
 	    }
@@ -2580,29 +2620,12 @@ webpackJsonp([1,4],[
 
 	        //return ( <div>test</div> );
 
+
 	        return (
 	            React.createElement("dl", {className: "clearfix cat"}, 
 	                React.createElement("dt", null, React.createElement("label", null, data.name)), 
 	                React.createElement("dd", null, 
-	                    React.createElement("dl", {className: "clearfix cat_item"}, 
-	                        data.items.map( function( item ) {
-	                            var url = item.doc_url || item.url
-	                                , img = item.img || Const.index.defaultImg 
-	                                , desc = item.desc || Const.index.defaultDesc
-	                                ;
-	                            
-	                            return ( 
-	                                React.createElement("dd", null, 
-	                                    React.createElement("a", {href: url, target: "_blank", className: "cover"}, 
-	                                        React.createElement("img", {src: img}), 
-	                                        React.createElement("span", null), 
-	                                        React.createElement("label", null, desc)
-	                                    ), 
-	                                    React.createElement("a", {href: item.url, target: "_blank", className: "link"}, item.name)
-	                                )
-	                            );
-	                        })
-	                    )
+	                    React.createElement(Items, {data: data.items})
 	                )
 	            )
 	        );
