@@ -2495,23 +2495,27 @@ webpackJsonp([1,4],[
 	        , {
 	            "name": "webpack 系统组件"
 	            , "items": [
+	                /*
 	                {
 	                    "name": "item name"
 	                    , "img": "./static/img/default_item.jpg"
 	                    , "url": "#"
 	                    , "desc": ""
 	                }
+	                */
 	            ]
 	        } 
 	        , {
 	            "name": "webpack 小工具"
 	            , "items": [
+	                /*
 	                {
 	                    "name": "item name"
 	                    , "img": "./static/img/default_item.jpg"
 	                    , "url": "#"
 	                    , "desc": ""
 	                }
+	                */
 	            ]
 	        }
 
