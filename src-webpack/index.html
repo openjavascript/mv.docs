@@ -10,16 +10,11 @@
 </head>
 
 <body>
-    <header>
-    <div class="inner">
-        <h1 class="sitename"><a href="index.html">mv project</a></h1>
-        <h2>webpack developer platform for web font-end</h2>
-        <a href="https://github.com/openjavascript/mv.docs" class="button"><small>View project on</small> GitHub</a>
-    </div>
-    </header>
+    <%= require( "html!./include/header.html" ) %>
 
     <div id="content-wrapper">
         <div class="inner clearfix">
+
             
             <dl class="clearfix cat">
                 <dt><label>项目方案</label></dt>
@@ -137,5 +132,6 @@
         </div>
     </div>
 
+<%= require( 'html!./include/script.html' ) %>
 </body>
 </html>

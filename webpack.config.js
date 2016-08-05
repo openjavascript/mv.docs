@@ -18,6 +18,9 @@ var languages = {
 
 var entry = {
         "index": "./src-webpack/static/js/index.js"
+        , "docs": "./src-webpack/static/js/docs.js"
+        , "list": "./src-webpack/static/js/list.js"
+        , "view": "./src-webpack/static/js/view.js"
     }
     , chunks = Object.keys(entry)
     ;
@@ -59,21 +62,18 @@ var config = {
           excludes: /.*\.less/
         })
         , new webpack.ProvidePlugin({ 
-            $: 'jquery'
-        })
-        , new CommonsChunkPlugin({
-            name: 'vendors', 
-            chunks: chunks, 
-            minChunks: chunks.length 
-        })
-        , new webpack.ProvidePlugin({
           $:      "jquery"
           , jQuery: "jquery"
           , Zepto: "zepto"
           , React: "react"
           , ReactDOM: "react-dom"
         })
-        , new ExtractTextPlugin('[name].css')
+        , new CommonsChunkPlugin({
+            name: 'vendors', 
+            chunks: chunks, 
+            minChunks: chunks.length 
+        })
+		, new ExtractTextPlugin('[name].css')
         , new webpack.HotModuleReplacementPlugin() 
 		/*
         , new I18nPlugin(

@@ -1,0 +1,18 @@
+
+
+.sitename a {
+    color: #fff;
+}
+
+.sitenav {
+    width: 940px;
+    margin: 40px auto 10px;
+
+}
+
+.sitenav a {
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 10px 0;
+}
