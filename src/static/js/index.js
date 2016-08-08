@@ -4,6 +4,7 @@ webpackJsonp([1,4],[
 
 	
 	console.log( 1 );
+	console.log( 2 );
 
 
 	var V = __webpack_require__( 1 )
@@ -15,6 +16,7 @@ webpackJsonp([1,4],[
 
 
 	Const.trigger( Const.initPage, [ data ] );
+
 
 
 /***/ },
@@ -741,14 +743,14 @@ webpackJsonp([1,4],[
 	    , Const = __webpack_require__( 5 )
 	    , r = $.extend( true, Const, {
 	            index: {
-	                defaultImg: 'http://p5.qhimg.com/d/inn/d6edc5a1/default_item.jpg'
-	                , defaultDesc: '该应用没有添加描述'
+	                defaultDesc: '该应用没有添加描述'
 	            }
 	            , initPage: 'onInitPage'
-	        } )
+	        }, window.defaultConst || {} )
 	    ;
 	module.exports = r;
 
+	console.log( 1 );
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
