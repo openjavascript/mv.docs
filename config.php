@@ -44,11 +44,7 @@ return array (
 
   'STRING_REPLACE_PATTERN' => array(
     '/http:\/\/[pi]\d+\.qhimg\.com\//' => 's.ssl.qhimg.com',
-    '/http:\/\/s\d+\.qhimg\.com\//' => 's.ssl.qhimg.com',
-    '/http:\/\/[pi]\d+\.qhmsg\.com\//' => 's.ssl.qhimg.com',
-    '/http:\/\/p\d+\.qhimg\.com\//' => 's.ssl.qhimg.com',
-    '/http:\/\/p\d+\.qhmsg\.com\//' => 's.ssl.qhimg.com',
-    '/http:\/\/s\d+\.qhmsg\.com\//' => 's.ssl.qhimg.com'
+    '/http:\/\/s\d+\.qhimg\.com\//' => 's.ssl.qhimg.com'
   )
 );
 
