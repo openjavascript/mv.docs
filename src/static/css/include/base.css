@@ -430,6 +430,7 @@ th {
 body {
   color: #666;
   background: #fafafa url(https://p4.ssl.qhimg.com/t019a5465a4eab82d57.jpg) 0 0 repeat;
+  /*background: #fafafa url(../../img/body-bg.jpg) 0 0 repeat;*/
 }
 
 p {

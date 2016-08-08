@@ -43,9 +43,20 @@ return array (
   'TUCHUANG_CDN_DOMAIN' => 'http://s.ssl.qhimg.com', 
 
   'STRING_REPLACE_PATTERN' => array(
-    '/http:\/\/[pi]\d+\.qhimg\.com\//' => 's.ssl.qhimg.com',
-    '/http:\/\/s\d+\.qhimg\.com\//' => 's.ssl.qhimg.com'
+    '/\/\/[pi]\d+\.qhimg\.com\//' => '//s.ssl.qhimg.com',
+    '/\/\/s\d+\.qhimg\.com\//' => '//s.ssl.qhimg.com',
+    '/\/\/[pi]\d+\.qhmsg\.com\//' => '//s.ssl.qhimg.com',
+    '/\/\/s\d+\.qhmsg\.com\//' => '//s.ssl.qhimg.com'
   )
+  , 'MOD_STRING_REPLACE_PATTERN' => array(
+    '/\/\/[pi]\d+\.qhimg\.com\//' => '//s.ssl.qhimg.com',
+    '/\/\/s\d+\.qhimg\.com\//' => '//s.ssl.qhimg.com',
+    '/\/\/[pi]\d+\.qhmsg\.com\//' => '//s.ssl.qhimg.com',
+    '/\/\/s\d+\.qhmsg\.com\//' => '//s.ssl.qhimg.com'
+  )
+
+
+
 );
 
 
