@@ -12,3 +12,4 @@ var V = require( 'mv.js' )
     ;
 module.exports = r;
 
+console.log( 1 );

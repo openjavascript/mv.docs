@@ -1,4 +1,7 @@
 
+console.log( 1 );
+console.log( 2 );
+
 
 var V = require( 'mv.js' )
     , Const = require( './const.js' )
@@ -9,3 +12,4 @@ var V = require( 'mv.js' )
 
 
 Const.trigger( Const.initPage, [ data ] );
+

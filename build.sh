@@ -53,4 +53,4 @@ cp -r `find ${TEMP_DIR}/output/html/ -iname *.html` "${OUTPUT_DIR}/";
 rm -rf "${TEMP_DIR}/";
 echo "Built done.";
 
-node ./utils/reset_url_prefix.js
+#node ./utils/reset_url_prefix.js

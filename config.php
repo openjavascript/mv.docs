@@ -35,6 +35,17 @@ return array (
   'CDN_JS_TPL' => true,
   'JS_TPL_LD' => '{%', //前端模版左定界符
   'JS_TPL_RD' => '%}' //前端模版右定界符
+
+  /* qhimg.com域名解析故障临时应对预案 */
+  , 'JINGCHUANG_CDN_MULTI_DOMAIN' => array ( 5,6,7,8 ),
+  'TUCHUANG_CDN_MULTI_DOMAIN' => array ( 5,6,7,8 ),
+  'JINGCHUANG_CDN_DOMAIN' => 'http://s.ssl.qhimg.com', 
+  'TUCHUANG_CDN_DOMAIN' => 'http://s.ssl.qhimg.com', 
+
+  'STRING_REPLACE_PATTERN' => array(
+    '/http:\/\/[pi]\d+\.qhimg\.com\//' => 's.ssl.qhimg.com',
+    '/http:\/\/s\d+\.qhimg\.com\//' => 's.ssl.qhimg.com'
+  )
 );
 
 

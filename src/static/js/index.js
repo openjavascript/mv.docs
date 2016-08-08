@@ -3,6 +3,8 @@ webpackJsonp([1,4],[
 /***/ function(module, exports, __webpack_require__) {
 
 	
+	console.log( 1 );
+
 
 	var V = __webpack_require__( 1 )
 	    , Const = __webpack_require__( 4 )
