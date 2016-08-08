@@ -10,7 +10,7 @@ foreachFolder( dir,function(list){
 			var path = dir + item[0];
 
 			var data = fs.readFileSync( path,"utf-8");  
-			data = data.replace( /\.qhimg\./g, '.qhmsg.' );
+			data = data.replace( /\([\d]+).qhimg\.com/g, '$1.ssl.qhimg.com' );
 			fs.writeFileSync( path, data );
 		}
 	}
